@@ -1,4 +1,4 @@
 devdash
 =======
 
-Developer Dashboard
+This is the Developer Dashboard.
