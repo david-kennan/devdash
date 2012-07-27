@@ -39,3 +39,5 @@ gem 'jquery-rails'
 
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
+gem 'multi_json', '~> 1.0.0'
+gem 'couchrest_model'
