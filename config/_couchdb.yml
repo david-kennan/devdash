@@ -1,0 +1,9 @@
+# cloudant couchdb configuration
+development:
+  protocol: 'https'
+  host: incrp.cloudant.com
+  port: 443
+  prefix: quote
+  suffix: 
+  username: incrp
+  password: cur10us
