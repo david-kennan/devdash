@@ -1,5 +1,7 @@
 # This is the model for suggestions
-require 'couchrest_model'
+
+# this is actually optional
+#require 'couchrest_model'
 
 class Suggestion < CouchRest::Model::Base
   property :FDLclass, String
@@ -8,6 +10,7 @@ class Suggestion < CouchRest::Model::Base
   property :block, String
   property :suggestion, String
   property :labels, [String]
+  property :trackingID, String
   property :testdata, TrueClass, :default => false
-  timestamps!
+  timestamps! # use created_at and updated_at fields
 end
