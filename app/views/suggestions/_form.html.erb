@@ -25,7 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :suggestion %><br />
-    <%= f.text_area :suggestion %>
+    <%= f.text_area :suggestion, :rows => 5 %>
+  </div>
+  <div class="field">
+    <%= f.label :labels %><br />
+    <%= text_field_tag :clabels, @suggestion.labels %>
   </div>
   <div class="actions">
     <%= f.submit %>

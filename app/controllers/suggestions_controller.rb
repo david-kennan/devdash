@@ -17,7 +17,7 @@ class SuggestionsController < ApplicationController
  
   def create
     @suggestion = Suggestion.new(params[:suggestion])
-
+    @suggestion.labels = params[:clabels].split
     if @suggestion.save
       redirect_to @suggestion, notice: 'Suggestion was successfully created.'
     else
@@ -27,7 +27,7 @@ class SuggestionsController < ApplicationController
 
   def update
     @suggestion = Suggestion.find(params[:id])
-
+    @suggestion.labels = params[:clabels].split
     if @suggestion.update_attributes(params[:suggestion])
       redirect_to @suggestion, notice: 'Suggestion was successfully updated.'
     else
