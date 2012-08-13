@@ -18,7 +18,7 @@
       <tr>
         <td><%= suggestion.page %></td>
         <td><%= suggestion.appVersion %></td>
-        <td><%= suggestion.suggestion %></td>
+        <td><%= truncate suggestion.suggestion, :length => 80 %></td>
         <td><%= link_to 'Show Full Suggestion', suggestion %></td>
         <td><%= link_to 'Edit', edit_suggestion_path(suggestion) %></td>
         <td><%= link_to 'Remove', suggestion, :confirm => 'Are you sure?', :method => :delete %></td>

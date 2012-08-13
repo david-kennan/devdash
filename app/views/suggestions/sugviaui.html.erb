@@ -1,0 +1,15 @@
+<p>Create New Suggestion Via UI
+
+<!-- filters -->
+<div id="devdash_svu_filters">
+  <p>Filtering:
+  <%= select_tag "page", "<option>Red</option><option>Green</option><option>Blue</option>".html_safe, :prompt => "Page" %>
+  <%= select_tag "block", "<option>Red</option><option>Green</option><option>Blue</option>".html_safe, :prompt => "Block" %>
+</div>
+
+<!-- application page embeddable -->
+<iframe width="320" height="480" src="http://localhost:5984/quote/_design/pheet/quotegame_v2.html">
+
+<!-- the rest -->
+
+<p><%= link_to t(:go_back), :back %>

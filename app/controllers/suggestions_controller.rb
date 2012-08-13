@@ -11,6 +11,10 @@ class SuggestionsController < ApplicationController
     @suggestion = Suggestion.new
   end
  
+  def sugviaui
+    @suggestions = Suggestion.all
+  end
+
   def edit
     @suggestion = Suggestion.find(params[:id])
   end

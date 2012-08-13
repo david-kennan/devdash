@@ -4,7 +4,11 @@ Devdash::Application.routes.draw do
 
   # other controllers
   resources :home
-  resources :suggestions
+  resources :suggestions do
+    collection do
+      get 'sugviaui'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
