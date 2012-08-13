@@ -1,6 +1,9 @@
 # English translation for the dashboard
 
 en:
+  # generic
   company: increpreneur
   product: developer dashboard
-
+  go_back: Go Back
+  show_sug: Show Suggestion
+  edit_sug: Edit Suggestion

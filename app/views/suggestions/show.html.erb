@@ -1,0 +1,41 @@
+<p>View Suggestion
+<p id="notice"><%= notice %></p>
+
+<p>
+<b>App Version:</b>
+<%= @suggestion.appVersion %>
+</p>
+
+<p>
+<b>Page:</b>
+<%= @suggestion.page %>
+</p>
+
+<p>
+<b>Block:</b>
+<%= @suggestion.block %>
+</p>
+
+<p>
+<b>Suggestion:</b>
+<%= @suggestion.suggestion %>
+</p>
+
+
+<p>
+<b>Labels:</b>
+<%= @suggestion.labels %>
+</p>
+
+<p>
+<b>Tracking Info:</b>
+<%= if @suggestion.trackingID then "Yep" else "Nope" end %>
+</p>
+
+<p>
+<b>Is This Test Data?:</b>
+<%= if @suggestion.testdata then "Yep" else "Nope" end %>
+</p>
+
+<%= link_to t(:edit_sug), edit_suggestion_path(@suggestion) %> |
+<%= link_to t(:go_back), :back %>

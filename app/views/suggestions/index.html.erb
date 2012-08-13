@@ -1,0 +1,32 @@
+<% if @suggestions.empty? %>
+  <p>There are no suggestions, would you like to enter a <%= link_to 'new suggestion', new_suggestion_path %>?
+
+<% else %>
+  <p>Suggestions
+
+  <table>
+    <tr>
+      <th>Page</th>
+      <th>Version</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @suggestions.each do |suggestion| %>
+      <tr>
+        <td><%= suggestion.page %></td>
+        <td><%= suggestion.appVersion %></td>
+        <td><%= suggestion.suggestion %></td>
+        <td><%= link_to 'Show Full Suggestion', suggestion %></td>
+        <td><%= link_to 'Edit', edit_suggestion_path(suggestion) %></td>
+        <td><%= link_to 'Remove', suggestion, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <br/>
+
+  <p>Would you like to enter a <%= link_to 'new suggestion', new_suggestion_path %>?
+<% end %>
